@@ -449,7 +449,7 @@
     </hop>
     <hop>
       <from>JSON Input</from>
-      <to>Select values</to>
+      <to>result</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -632,7 +632,7 @@
     </step>
 
   <step>
-    <name>Select values</name>
+    <name>result</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
