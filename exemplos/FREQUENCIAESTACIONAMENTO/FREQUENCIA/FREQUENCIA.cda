@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="dsEmpreendimento" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsSegmentacao" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsMediaPermanencia" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsGrafico" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsDia" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsHora" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsFrequencia" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsPermanencia" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsClientes" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsCliente" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsGravarSegmentacao" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsUsuario" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsWiseitUrl" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsDatabase" type="sql.jndi">
+         <Jndi>WISEIT</Jndi>
+      </Connection>
+      <Connection id="dsFiltroSegmentacao" type="kettle.TransFromFile">
+         <KtrFile>../COMMONS/ktr/FILTROSEGMENTACAO.ktr</KtrFile>
+         <variables datarow-name="pID"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pContexto"/>
+      </Connection>
+      <Connection id="dsSegmentacaoOracle" type="kettle.TransFromFile">
+         <KtrFile>../COMMONS/ktr/SEGMENTACAO.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pContexto"/>
+         <variables datarow-name="pUsuario"/>
+      </Connection>
+      <Connection id="dsMediaPermanenciaOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/MEDIAPERMANENCIA.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pDiaSemana"/>
+         <variables datarow-name="pHora"/>
+         <variables datarow-name="pPermanencia"/>
+      </Connection>
+      <Connection id="dsGraficoOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/GRAFICO.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pDiaSemana"/>
+         <variables datarow-name="pHora"/>
+         <variables datarow-name="pPermanencia"/>
+      </Connection>
+      <Connection id="dsDiaOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/DIASEMANA.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pHora"/>
+         <variables datarow-name="pPermanencia"/>
+      </Connection>
+      <Connection id="dsHoraOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/HORA.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pDiaSemana"/>
+         <variables datarow-name="pPermanencia"/>
+      </Connection>
+      <Connection id="dsFrequenciaOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/CLIENTES_FREQUENCIA.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pDiaSemana"/>
+         <variables datarow-name="pHora"/>
+         <variables datarow-name="pPermanencia"/>
+      </Connection>
+      <Connection id="dsPermanenciaOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/TEMPOPERMANENCIA.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pDiaSemana"/>
+         <variables datarow-name="pHora"/>
+      </Connection>
+      <Connection id="dsClientesOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/CLIENTES.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pDiaSemana"/>
+         <variables datarow-name="pHora"/>
+         <variables datarow-name="pPermanencia"/>
+      </Connection>
+      <Connection id="dsClienteOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/TAB_CLIENTE_FREQUENCIA.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pDiaSemana"/>
+         <variables datarow-name="pHora"/>
+         <variables datarow-name="pPermanencia"/>
+         <variables datarow-name="pCliente"/>
+      </Connection>
+      <Connection id="dsGravarSegmentacaoOracle" type="kettle.TransFromFile">
+         <KtrFile>ktr/GRAVAR_SEGMENTACAO.ktr</KtrFile>
+         <variables datarow-name="pEmpreendimento"/>
+         <variables datarow-name="pSegmentacao"/>
+         <variables datarow-name="pInicio"/>
+         <variables datarow-name="pTermino"/>
+         <variables datarow-name="pDiaSemana"/>
+         <variables datarow-name="pHora"/>
+         <variables datarow-name="pPermanencia"/>
+         <variables datarow-name="pNomeSegmentacao"/>
+         <variables datarow-name="pVisibilidade"/>
+         <variables datarow-name="pUsuario"/>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="dsEmpreendimento" id="dsEmpreendimento" type="sql">
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="${[security:principalName]}" name="user" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT DISTINCT
+    E.COD_EMPREENDIMENTO, LOWER(E.NME_EMPREENDIMENTO) AS NME_EMPREENDIMENTO
+FROM
+    EMPREENDIMENTO E
+ORDER BY
+	LOWER(E.NME_EMPREENDIMENTO)]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsSegmentacao" id="dsSegmentacao" type="sql">
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="${[security:principalName]}" name="user" type="String"/>
+         <Parameter default="0" name="pEmpreendimento" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FILTRO_SEGMENTACAO
+    1, --CONTEXTO
+    ${pEmpreendimento}, --EMPREENDIMENTO
+    ${pUsuario} --USUÁRIO]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsMediaPermanencia" id="dsMediaPermanencia"
+               type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'MEDIA_PERMANENCIA',
+    /*SES*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/${pDiaSemana},
+    /*HOR*/${pHora},
+    /*PER*/${pPermanencia},
+    /*SEG*/${pSegmentacao},
+    /*NSG*/'',
+    /*VIS*/'',
+    /*USU*/'',
+    /*TCL*/'',    
+    /*CPS*/'']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsGrafico" id="dsGrafico" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>Data</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Clientes</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'GRAFICO',
+    /*EMP*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/${pDiaSemana},
+    /*HOR*/${pHora},
+    /*PER*/${pPermanencia},
+    /*SEG*/${pSegmentacao},
+    /*NSG*/'',
+    /*VIS*/'',
+    /*USU*/'',
+    /*TCL*/'',    
+    /*CPS*/'']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsDia" id="dsDia" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>COD_DIASEMANA</Name>
+         </Column>
+         <Column idx="1">
+            <Name>DIA DA SEMANA</Name>
+         </Column>
+         <Column idx="2">
+            <Name>QUANTIDADE</Name>
+         </Column>
+         <Column idx="3">
+            <Name> </Name>
+         </Column>
+         <Column idx="4">
+            <Name>MÉDIA</Name>
+         </Column>
+         <Column idx="5">
+            <Name> </Name>
+         </Column>
+         <Column idx="6">
+            <Name>% DO TOTAL</Name>
+         </Column>
+      </Columns>
+      <Output indexes="0,1,2,6,4,3" mode="include"/>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'DIASEMANA',
+    /*EMP*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/'',
+    /*HOR*/${pHora},
+    /*PER*/${pPermanencia},
+    /*SEG*/${pSegmentacao},
+    /*NSG*/'',
+    /*VIS*/'',
+    /*USU*/'',
+    /*TCL*/'',    
+    /*CPS*/'']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsHora" id="dsHora" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>Horário</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Total</Name>
+         </Column>
+         <Column idx="2">
+            <Name>Média</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'HORA',
+    /*SES*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/${pDiaSemana},
+    /*HOR*/'',
+    /*PER*/${pPermanencia},
+    /*SEG*/${pSegmentacao},
+    /*NSG*/'',
+    /*VIS*/'',
+    /*USU*/'',
+    /*TCL*/'',    
+    /*CPS*/'']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsFrequencia" id="dsFrequencia" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>VEZES</Name>
+         </Column>
+         <Column idx="1">
+            <Name>FREQUÊNCIA</Name>
+         </Column>
+         <Column idx="2">
+            <Name>CLIENTES</Name>
+         </Column>
+         <Column idx="3">
+            <Name> </Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'CLIENTES_FREQUENCIA',
+    /*EMP*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/${pDiaSemana},
+    /*HOR*/${pHora},
+    /*PER*/${pPermanencia},
+    /*SEG*/${pSegmentacao},
+    /*NSG*/'',
+    /*VIS*/'',
+    /*USU*/'',
+    /*TCL*/'',    
+    /*CPS*/'']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsPermanencia" id="dsPermanencia" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>Tempo</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Frequência</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'TEMPO_PERMANENCIA',
+    /*SES*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/${pDiaSemana},
+    /*HOR*/${pHora},
+    /*PER*/'',
+    /*SEG*/${pSegmentacao},
+    /*NSG*/'',
+    /*VIS*/'',
+    /*USU*/'',
+    /*TCL*/'',    
+    /*CPS*/'']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsClientes" id="dsClientes" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name> </Name>
+         </Column>
+         <Column idx="1">
+            <Name>COD</Name>
+         </Column>
+         <Column idx="2">
+            <Name>CLIENTE</Name>
+         </Column>
+         <Column idx="3">
+            <Name>CPF</Name>
+         </Column>
+         <Column idx="4">
+            <Name>BAIRRO</Name>
+         </Column>
+         <Column idx="5">
+            <Name>FREQUÊNCIA</Name>
+         </Column>
+         <Column idx="6">
+            <Name>ÚLTIMA FREQUÊNCIA</Name>
+         </Column>
+         <Column idx="7">
+            <Name>TEMPO</Name>
+         </Column>
+         <Column idx="8">
+            <Name>MÉDIA</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'CLIENTES',
+    /*EMP*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/${pDiaSemana},
+    /*HOR*/${pHora},
+    /*PER*/${pPermanencia},
+    /*SEG*/${pSegmentacao},
+    /*NSG*/'',
+    /*VIS*/'',
+    /*USU*/'',
+    /*TCL*/'100',    
+    /*CPS*/'']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsCliente" id="dsCliente" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>DATA DE ENTRADA</Name>
+         </Column>
+         <Column idx="1">
+            <Name>CANCELA DE ENTRADA</Name>
+         </Column>
+         <Column idx="2">
+            <Name>DATA DE SAÍDA</Name>
+         </Column>
+         <Column idx="3">
+            <Name>CANCELA DE SAÍDA</Name>
+         </Column>
+         <Column idx="4">
+            <Name>TEMPO DE PERMANÊNCIA</Name>
+         </Column>
+         <Column idx="5">
+            <Name>VALOR PAGO</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+         <Parameter default="" name="pCliente" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'TAB_CLIENTE_FREQUENCIA',
+    /*EMP*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/${pDiaSemana},
+    /*HOR*/${pHora},
+    /*PER*/${pPermanencia},
+    /*SEG*/'',
+    /*NSG*/'',
+    /*VIS*/'',
+    /*USU*/'',
+    /*TCL*/'',    
+    /*CPS*/${pCliente}]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsGravarSegmentacao" id="dsGravarSegmentacao"
+               type="sql">
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+         <Parameter default="" name="pNomeSegmentacao" type="String"/>
+         <Parameter default="" name="pVisibilidade" type="String"/>
+         <Parameter default="" name="pUsuario" type="String"/>
+      </Parameters>
+      <Query><![CDATA[EXEC SPDM_DB_FREQ_ESTACIONAMENTO
+    /*SES*/'SEGMENTACAO',
+    /*SES*/${pEmpreendimento},
+    /*DTI*/${pInicio},
+    /*DTT*/${pTermino},
+    /*DIA*/${pDiaSemana},
+    /*HOR*/${pHora},
+    /*PER*/${pPermanencia},
+    /*SEG*/${pSegmentacao},
+    /*NSG*/${pNomeSegmentacao},
+    /*VIS*/${pVisibilidade},
+    /*USU*/${pUsuario},
+    /*TCL*/'',    
+    /*CPS*/'']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsUsuario" id="dsUsuario" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="${[security:principalName]}" name="user" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    COD_USUARIO
+FROM
+    USUARIO
+WHERE
+    UPPER(NME_LOGIN) = UPPER(${user})
+    AND FLG_ATIVO = 1]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsWiseitUrl" id="dsWiseitUrl" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    VLR_CONFIGURACAO
+FROM
+    CONFIGURACAO
+WHERE
+    SGL_CONFIGURACAO = 'URL_SERVER_JBOSS']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsDatabase" id="dsDatabase" type="sql">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    VLR_CONFIGURACAO
+FROM
+    CONFIGURACAO
+WHERE
+    SGL_CONFIGURACAO = 'BD_TIPO']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsFiltroSegmentacao" id="dsFiltroSegmentacao"
+               type="kettle">
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="pID" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="CLIENTE" name="pContexto" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsSegmentacaoOracle" id="dsSegmentacaoOracle"
+               type="kettle">
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Output indexes="3,4" mode="include"/>
+      <Parameters>
+         <Parameter default="0" name="pEmpreendimento" type="String"/>
+         <Parameter default="1" name="pContexto" type="String"/>
+         <Parameter default="${[security:principalName]}" name="pUsuario" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Executar Procedure]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsMediaPermanenciaOracle"
+               id="dsMediaPermanenciaOracle"
+               type="kettle">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsGraficoOracle" id="dsGraficoOracle" type="kettle">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>Data</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Clientes</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsDiaOracle" id="dsDiaOracle" type="kettle">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>COD_DIASEMANA</Name>
+         </Column>
+         <Column idx="1">
+            <Name>DIA DA SEMANA</Name>
+         </Column>
+         <Column idx="2">
+            <Name>QUANTIDADE</Name>
+         </Column>
+         <Column idx="3">
+            <Name> </Name>
+         </Column>
+         <Column idx="4">
+            <Name>MÉDIA</Name>
+         </Column>
+         <Column idx="5">
+            <Name> </Name>
+         </Column>
+         <Column idx="6">
+            <Name>% DO TOTAL</Name>
+         </Column>
+      </Columns>
+      <Output indexes="0,1,2,6,4,3" mode="include"/>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsHoraOracle" id="dsHoraOracle" type="kettle">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>Horário</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Total</Name>
+         </Column>
+         <Column idx="2">
+            <Name>Média</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsFrequenciaOracle" id="dsFrequenciaOracle"
+               type="kettle">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>VEZES</Name>
+         </Column>
+         <Column idx="1">
+            <Name>FREQUÊNCIA</Name>
+         </Column>
+         <Column idx="2">
+            <Name>CLIENTES</Name>
+         </Column>
+         <Column idx="3">
+            <Name> </Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsPermanenciaOracle" id="dsPermanenciaOracle"
+               type="kettle">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>Tempo</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Frequência</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsClientesOracle" id="dsClientesOracle"
+               type="kettle">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name> </Name>
+         </Column>
+         <Column idx="1">
+            <Name>COD</Name>
+         </Column>
+         <Column idx="2">
+            <Name>CLIENTE</Name>
+         </Column>
+         <Column idx="3">
+            <Name>CPF</Name>
+         </Column>
+         <Column idx="4">
+            <Name>BAIRRO</Name>
+         </Column>
+         <Column idx="5">
+            <Name>FREQUÊNCIA</Name>
+         </Column>
+         <Column idx="6">
+            <Name>ÚLTIMA FREQUÊNCIA</Name>
+         </Column>
+         <Column idx="7">
+            <Name>TEMPO</Name>
+         </Column>
+         <Column idx="8">
+            <Name>MÉDIA</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsClienteOracle" id="dsClienteOracle" type="kettle">
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="0">
+            <Name>DATA DE ENTRADA</Name>
+         </Column>
+         <Column idx="1">
+            <Name>CANCELA DE ENTRADA</Name>
+         </Column>
+         <Column idx="2">
+            <Name>DATA DE SAÍDA</Name>
+         </Column>
+         <Column idx="3">
+            <Name>CANCELA DE SAÍDA</Name>
+         </Column>
+         <Column idx="4">
+            <Name>TEMPO DE PERMANÊNCIA</Name>
+         </Column>
+         <Column idx="5">
+            <Name>VALOR PAGO</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+         <Parameter default="" name="pCliente" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsGravarSegmentacaoOracle"
+               id="dsGravarSegmentacaoOracle"
+               type="kettle">
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="pEmpreendimento" type="String"/>
+         <Parameter default="" name="pSegmentacao" type="String"/>
+         <Parameter default="" name="pInicio" type="String"/>
+         <Parameter default="" name="pTermino" type="String"/>
+         <Parameter default="" name="pDiaSemana" type="String"/>
+         <Parameter default="" name="pHora" type="String"/>
+         <Parameter default="" name="pPermanencia" type="String"/>
+         <Parameter default="" name="pNomeSegmentacao" type="String"/>
+         <Parameter default="" name="pVisibilidade" type="String"/>
+         <Parameter default="" name="pUsuario" type="String"/>
+      </Parameters>
+      <Query><![CDATA[Resultado]]></Query>
+   </DataAccess>
+</CDADescriptor>

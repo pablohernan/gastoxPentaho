@@ -1,2 +1,0 @@
-# gastoxPentaho
-Dashboard Pentaho
