@@ -9,16 +9,16 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
-        <parameter>
-            <name>pStart</name>
-            <default_value/>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>pEnd</name>
-            <default_value/>
-            <description/>
-        </parameter>         
+      <parameter>
+        <name>pEnd</name>
+        <default_value>1556769600</default_value>
+        <description/>
+      </parameter>
+      <parameter>
+        <name>pStart</name>
+        <default_value>1556769600</default_value>
+        <description/>
+      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -653,9 +653,7 @@
       <schema_name/>
     </partitioning>
     <fields>      <field>        <name>categoria</name>
-        <rename/>
       </field>      <field>        <name>precio</name>
-        <rename/>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>    <cluster_schema/>
     <remotesteps>

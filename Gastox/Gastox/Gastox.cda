@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CDADescriptor>
    <DataSources>
-      <Connection id="DsFechas" type="kettle.TransFromFile">
+      <Connection id="dsTotales" type="kettle.TransFromFile">
+         <KtrFile>ktr/totalRs.ktr</KtrFile>
+         <variables datarow-name="pStart"/>
+         <variables datarow-name="pEnd"/>
+      </Connection>
+      <Connection id="dsFechas" type="kettle.TransFromFile">
          <KtrFile>ktr/barRs.ktr</KtrFile>
          <variables datarow-name="pStart"/>
          <variables datarow-name="pEnd"/>
       </Connection>
    </DataSources>
-   <DataAccess access="public" connection="DsFechas" id="DsFechas" type="kettle">
-      <Name>DsFechas</Name>
+   <DataAccess access="public" connection="dsTotales" id="dsTotales" type="kettle">
+      <Name>dsTotales</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="pStart" type="String"/>
+         <Parameter default="" name="pEnd" type="String"/>
+      </Parameters>
+      <Query><![CDATA[result]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsFechas" id="dsFechas" type="kettle">
+      <Name>dsFechas</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns>
          <Column idx="0">

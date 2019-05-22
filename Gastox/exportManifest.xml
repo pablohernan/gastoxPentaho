@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="22-05-2019 09:01:38 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="22-05-2019 01:52:56 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="Gastox">
         <ExportManifestProperty>
             <EntityMetaData name="Gastox" createdDate="2019-05-16T16:02:15.596-03:00" isFolder="true" path="Gastox" isHidden="false" isSchedulable="false" locale="pt_BR" title="Gastox"/>
