@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>barRs</name>
+    <name>categoriasRs</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#x2f;</directory>
+    <directory>/public/Gastox/ktr</directory>
     <parameters>
       <parameter>
         <name>pEnd</name>
-        <default_value>1556769600</default_value>
+        <default_value/>
         <description/>
       </parameter>
       <parameter>
         <name>pStart</name>
-        <default_value>1556769600</default_value>
+        <default_value/>
         <description/>
       </parameter>
     </parameters>
@@ -438,10 +437,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2019&#x2f;05&#x2f;16 15&#x3a;12&#x3a;57.279</created_date>
+    <created_date>2019/05/16 15:12:57.279</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019&#x2f;05&#x2f;16 15&#x3a;12&#x3a;57.279</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <modified_date>2019/05/16 15:12:57.279</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -453,19 +452,19 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Generate Rows</from>
+      <to>REST Client</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>JSON Input</from>
       <to>result</to>
       <enabled>Y</enabled>
     </hop>
-    <hop>
-      <from>Get Variables</from>
-      <to>REST Client</to>
-      <enabled>Y</enabled>
-    </hop>
   </order>
   <step>
-    <name>Get Variables</name>
-    <type>GetVariable</type>
+    <name>Generate Rows</name>
+    <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -476,30 +475,23 @@
     </partitioning>
     <fields>
       <field>
-        <name>pStart</name>
-        <variable>&#x24;&#x7b;pStart&#x7d;</variable>
+        <name>url</name>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
+        <nullif>http://localhost/gastoxServices.git/total.php?start=1556769600&amp;end=1557889200&amp;type=category</nullif>
         <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>pEnd</name>
-        <variable>&#x24;&#x7b;pEnd&#x7d;</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -508,12 +500,11 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>112</yloc>
+      <xloc>128</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>JSON Input</name>
     <type>JsonInput</type>
@@ -536,16 +527,11 @@
     <ignoreMissingPath>N</ignoreMissingPath>
     <rownum_field/>
     <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
     </file>
     <fields>
       <field>
-        <name>fecha</name>
-        <path>&#x24;..fecha</path>
+        <name>categoria</name>
+        <path>$..categoria</path>
         <type>String</type>
         <format/>
         <currency/>
@@ -558,7 +544,7 @@
       </field>
       <field>
         <name>precio</name>
-        <path>&#x24;..precio</path>
+        <path>$..precio</path>
         <type>Number</type>
         <format/>
         <currency/>
@@ -594,8 +580,7 @@
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>REST Client</name>
     <type>Rest</type>
@@ -609,8 +594,8 @@
     </partitioning>
     <applicationType>JSON</applicationType>
     <method>GET</method>
-    <url>http&#x3a;&#x2f;&#x2f;localhost&#x2f;gastoxServices.git&#x2f;bar.php&#x3f;start&#x3d;&#x24;&#x7b;pStart&#x7d;&#x26;end&#x3d;&#x24;&#x7b;pEnd&#x7d;&#x26;group&#x3d;day</url>
-    <urlInField>N</urlInField>
+    <url/>
+    <urlInField>Y</urlInField>
     <dynamicMethod>N</dynamicMethod>
     <methodFieldName/>
     <urlField>url</urlField>
@@ -633,7 +618,7 @@
       <code/>
       <response_time/>
       <response_header/>
-      </result>
+    </result>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -646,8 +631,7 @@
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>result</name>
     <type>SelectValues</type>
@@ -659,10 +643,16 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>      <field>        <name>fecha</name>
-      </field>      <field>        <name>precio</name>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>    <cluster_schema/>
+    <fields>
+      <field>
+        <name>categoria</name>
+      </field>
+      <field>
+        <name>precio</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -674,8 +664,7 @@
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>

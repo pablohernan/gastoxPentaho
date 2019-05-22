@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="22-05-2019 09:01:38 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestEntity path="Gastox">
+        <ExportManifestProperty>
+            <EntityMetaData name="Gastox" createdDate="2019-05-16T16:02:15.596-03:00" isFolder="true" path="Gastox" isHidden="false" isSchedulable="false" locale="pt_BR" title="Gastox"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/Gastox.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Gastox.cda" createdDate="2019-05-16T16:07:53.215-03:00" isFolder="false" path="Gastox/Gastox.cda" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/Gastox.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Gastox.cdfde" createdDate="2019-05-16T16:01:45.645-03:00" isFolder="false" path="Gastox/Gastox.cdfde" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/Gastox.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Gastox.wcdf" createdDate="2019-05-16T16:01:45.562-03:00" isFolder="false" path="Gastox/Gastox.wcdf" isHidden="false" isSchedulable="true" locale="pt_BR" description="Gastox" title="Gastox"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="ktr" createdDate="2019-05-16T16:06:26.588-03:00" isFolder="true" path="Gastox/ktr" isHidden="false" isSchedulable="false" locale="pt_BR" title="ktr"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/ktr/barRs.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="barRs.ktr" createdDate="2019-05-22T08:38:04.222-03:00" isFolder="false" path="Gastox/ktr/barRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="barRs"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/ktr/categoriasRs.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="categoriasRs.ktr" createdDate="2019-05-21T10:17:54.465-03:00" isFolder="false" path="Gastox/ktr/categoriasRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="categoriasRs"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/ktr/restToRs.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="restToRs.ktr" createdDate="2019-05-16T16:06:26.614-03:00" isFolder="false" path="Gastox/ktr/restToRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="restToRs"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/ktr/totalRs.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="totalRs.ktr" createdDate="2019-05-21T10:18:01.250-03:00" isFolder="false" path="Gastox/ktr/totalRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="totalRs"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/restToRs.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="restToRs.ktr" createdDate="2019-05-16T16:04:19.966-03:00" isFolder="false" path="Gastox/restToRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="restToRs"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

@@ -9,6 +9,16 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
+        <parameter>
+            <name>pStart</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>pEnd</name>
+            <default_value/>
+            <description/>
+        </parameter>      
     </parameters>
     <log>
       <trans-log-table>
@@ -443,19 +453,19 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Generate Rows</from>
-      <to>REST Client</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>JSON Input</from>
       <to>result</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Get Variables</from>
+      <to>REST Client</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
-    <name>Generate Rows</name>
-    <type>RowGenerator</type>
+    <name>Get Variables</name>
+    <type>GetVariable</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -466,23 +476,30 @@
     </partitioning>
     <fields>
       <field>
-        <name>url</name>
+        <name>pStart</name>
+        <variable>&#x24;&#x7b;pStart&#x7d;</variable>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
-        <nullif>http&#x3a;&#x2f;&#x2f;localhost&#x2f;gastoxServices.git&#x2f;total.php&#x3f;start&#x3d;1556769600&#x26;end&#x3d;1557889200&#x26;type&#x3d;category</nullif>
         <length>-1</length>
         <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>pEnd</name>
+        <variable>&#x24;&#x7b;pEnd&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
       </field>
     </fields>
-    <limit>1</limit>
-    <never_ending>N</never_ending>
-    <interval_in_ms>5000</interval_in_ms>
-    <row_time_field>now</row_time_field>
-    <last_time_field>FiveSecondsAgo</last_time_field>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -491,8 +508,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>224</yloc>
+      <xloc>96</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -527,8 +544,21 @@
     </file>
     <fields>
       <field>
-        <name>categoria</name>
-        <path>&#x24;..categoria</path>
+        <name>total</name>
+        <path>&#x24;..total</path>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dias</name>
+        <path>&#x24;..dias</path>
         <type>String</type>
         <format/>
         <currency/>
@@ -540,8 +570,8 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>precio</name>
-        <path>&#x24;..precio</path>
+        <name>promedioDia</name>
+        <path>&#x24;..promedioDia</path>
         <type>Number</type>
         <format/>
         <currency/>
@@ -592,8 +622,8 @@
     </partitioning>
     <applicationType>JSON</applicationType>
     <method>GET</method>
-    <url/>
-    <urlInField>Y</urlInField>
+    <url>http&#x3a;&#x2f;&#x2f;localhost&#x2f;gastoxServices.git&#x2f;total.php&#x3f;start&#x3d;&#x24;&#x7b;pStart&#x7d;&#x26;end&#x3d;&#x24;&#x7b;pEnd&#x7d;&#x26;type&#x3d;total</url>
+    <urlInField>N</urlInField>
     <dynamicMethod>N</dynamicMethod>
     <methodFieldName/>
     <urlField>url</urlField>
@@ -642,9 +672,11 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>      <field>        <name>categoria</name>
+    <fields>      <field>        <name>total</name>
         <rename/>
-      </field>      <field>        <name>precio</name>
+      </field>      <field>        <name>dias</name>
+        <rename/>
+      </field>      <field>        <name>promedioDia</name>
         <rename/>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>    <cluster_schema/>

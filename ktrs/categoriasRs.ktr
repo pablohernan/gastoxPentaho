@@ -9,6 +9,16 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
+        <parameter>
+            <name>pStart</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>pEnd</name>
+            <default_value/>
+            <description/>
+        </parameter>         
     </parameters>
     <log>
       <trans-log-table>
