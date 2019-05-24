@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
     <name>restToRs</name>
@@ -7,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#x2f;</directory>
+    <directory>/public/Gastox/ktr</directory>
     <parameters>
     </parameters>
     <log>
@@ -428,10 +427,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2019&#x2f;05&#x2f;16 15&#x3a;12&#x3a;57.279</created_date>
+    <created_date>2019/05/16 15:12:57.279</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019&#x2f;05&#x2f;16 15&#x3a;12&#x3a;57.279</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <modified_date>2019/05/16 15:12:57.279</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -472,7 +471,7 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>http&#x3a;&#x2f;&#x2f;localhost&#x2f;gastoxServices.git&#x2f;rest.php&#x3f;start&#x3d;1556769600&#x26;end&#x3d;1557889200&#x26;group&#x3d;day</nullif>
+        <nullif>http://localhost/gastoxServices.git/rest.php?start=1556769600&amp;end=1557889200&amp;group=day</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -495,8 +494,7 @@
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>JSON Input</name>
     <type>JsonInput</type>
@@ -519,16 +517,11 @@
     <ignoreMissingPath>N</ignoreMissingPath>
     <rownum_field/>
     <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
     </file>
     <fields>
       <field>
         <name>fecha</name>
-        <path>&#x24;..fecha</path>
+        <path>$..fecha</path>
         <type>String</type>
         <format/>
         <currency/>
@@ -541,7 +534,7 @@
       </field>
       <field>
         <name>precio</name>
-        <path>&#x24;..precio</path>
+        <path>$..precio</path>
         <type>Number</type>
         <format/>
         <currency/>
@@ -577,8 +570,7 @@
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>REST Client</name>
     <type>Rest</type>
@@ -616,7 +608,7 @@
       <code/>
       <response_time/>
       <response_header/>
-      </result>
+    </result>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -629,8 +621,7 @@
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>result</name>
     <type>SelectValues</type>
@@ -642,12 +633,16 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>      <field>        <name>fecha</name>
-        <rename/>
-      </field>      <field>        <name>precio</name>
-        <rename/>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>    <cluster_schema/>
+    <fields>
+      <field>
+        <name>fecha</name>
+      </field>
+      <field>
+        <name>precio</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -659,8 +654,7 @@
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>

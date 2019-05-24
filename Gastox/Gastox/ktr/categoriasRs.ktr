@@ -452,19 +452,19 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Generate Rows</from>
-      <to>REST Client</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>JSON Input</from>
       <to>result</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Get Variables</from>
+      <to>REST Client</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
-    <name>Generate Rows</name>
-    <type>RowGenerator</type>
+    <name>Get Variables</name>
+    <type>GetVariable</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -475,23 +475,30 @@
     </partitioning>
     <fields>
       <field>
-        <name>url</name>
+        <name>pStart</name>
+        <variable>${pStart}</variable>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
-        <nullif>http://localhost/gastoxServices.git/total.php?start=1556769600&amp;end=1557889200&amp;type=category</nullif>
         <length>-1</length>
         <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>pEnd</name>
+        <variable>${pEnd}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
       </field>
     </fields>
-    <limit>1</limit>
-    <never_ending>N</never_ending>
-    <interval_in_ms>5000</interval_in_ms>
-    <row_time_field>now</row_time_field>
-    <last_time_field>FiveSecondsAgo</last_time_field>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -500,7 +507,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
+      <xloc>96</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -594,8 +601,8 @@
     </partitioning>
     <applicationType>JSON</applicationType>
     <method>GET</method>
-    <url/>
-    <urlInField>Y</urlInField>
+    <url>http://localhost/gastoxServices.git/total.php?start=${pStart}&amp;end=${pEnd}&amp;type=category</url>
+    <urlInField>N</urlInField>
     <dynamicMethod>N</dynamicMethod>
     <methodFieldName/>
     <urlField>url</urlField>
