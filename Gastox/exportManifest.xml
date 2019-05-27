@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="24-05-2019 06:16:36 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="27-05-2019 10:30:46 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="Gastox">
         <ExportManifestProperty>
             <EntityMetaData name="Gastox" createdDate="2019-05-23T07:29:53.465-03:00" isFolder="true" path="Gastox" isHidden="false" isSchedulable="false" locale="pt_BR" title="Gastox"/>
@@ -76,6 +76,30 @@
     <ExportManifestEntity path="Gastox/ktr/categoriasRs.ktr">
         <ExportManifestProperty>
             <EntityMetaData name="categoriasRs.ktr" createdDate="2019-05-23T07:29:54.413-03:00" isFolder="false" path="Gastox/ktr/categoriasRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="categoriasRs"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/ktr/descripcionRs.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="descripcionRs.ktr" createdDate="2019-05-27T09:07:42.150-03:00" isFolder="false" path="Gastox/ktr/descripcionRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="descripcionRs"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/ktr/metodosRs.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="metodosRs.ktr" createdDate="2019-05-27T09:27:56.740-03:00" isFolder="false" path="Gastox/ktr/metodosRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="metodosRs"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

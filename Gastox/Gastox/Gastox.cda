@@ -6,6 +6,16 @@
          <variables datarow-name="pStart"/>
          <variables datarow-name="pEnd"/>
       </Connection>
+      <Connection id="dsDescripcion" type="kettle.TransFromFile">
+         <KtrFile>ktr/descripcionRs.ktr</KtrFile>
+         <variables datarow-name="pStart"/>
+         <variables datarow-name="pEnd"/>
+      </Connection>
+      <Connection id="dsMetodos" type="kettle.TransFromFile">
+         <KtrFile>ktr/metodosRs.ktr</KtrFile>
+         <variables datarow-name="pStart"/>
+         <variables datarow-name="pEnd"/>
+      </Connection>
       <Connection id="dsTotales" type="kettle.TransFromFile">
          <KtrFile>ktr/totalRs.ktr</KtrFile>
          <variables datarow-name="pStart"/>
@@ -19,6 +29,26 @@
    </DataSources>
    <DataAccess access="public" connection="dsCategorias" id="dsCategorias" type="kettle">
       <Name>dsCategorias</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="pStart" type="String"/>
+         <Parameter default="" name="pEnd" type="String"/>
+      </Parameters>
+      <Query><![CDATA[result]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsDescripcion" id="dsDescripcion" type="kettle">
+      <Name>dsDescripcion</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="pStart" type="String"/>
+         <Parameter default="" name="pEnd" type="String"/>
+      </Parameters>
+      <Query><![CDATA[result]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dsMetodos" id="dsMetodos" type="kettle">
+      <Name>dsMetodos</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
       <Parameters>
