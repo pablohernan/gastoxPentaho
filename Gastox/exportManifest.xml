@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="27-05-2019 10:30:46 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="27-05-2019 04:02:26 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="Gastox">
         <ExportManifestProperty>
             <EntityMetaData name="Gastox" createdDate="2019-05-23T07:29:53.465-03:00" isFolder="true" path="Gastox" isHidden="false" isSchedulable="false" locale="pt_BR" title="Gastox"/>
@@ -40,6 +40,30 @@
     <ExportManifestEntity path="Gastox/Gastox.wcdf">
         <ExportManifestProperty>
             <EntityMetaData name="Gastox.wcdf" createdDate="2019-05-23T07:29:53.485-03:00" isFolder="false" path="Gastox/Gastox.wcdf" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox.wcdf"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/js">
+        <ExportManifestProperty>
+            <EntityMetaData name="js" createdDate="2019-05-27T15:15:56.273-03:00" isFolder="true" path="Gastox/js" isHidden="false" isSchedulable="false" locale="pt_BR" title="js"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Gastox/js/moment.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="moment.js" createdDate="2019-05-27T15:16:05.984-03:00" isFolder="false" path="Gastox/js/moment.js" isHidden="true" isSchedulable="true" locale="pt_BR" title="moment.js"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

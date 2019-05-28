@@ -10,12 +10,12 @@
     <parameters>
       <parameter>
         <name>pEnd</name>
-        <default_value>1556769600</default_value>
+        <default_value/>
         <description/>
       </parameter>
       <parameter>
         <name>pStart</name>
-        <default_value>1556769600</default_value>
+        <default_value/>
         <description/>
       </parameter>
     </parameters>
@@ -531,7 +531,7 @@
     <removeSourceField>N</removeSourceField>
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <ignoreMissingPath>N</ignoreMissingPath>
+    <ignoreMissingPath>Y</ignoreMissingPath>
     <rownum_field/>
     <file>
     </file>
