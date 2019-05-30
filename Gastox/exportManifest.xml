@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="27-05-2019 04:02:26 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="30-05-2019 07:41:49 BRT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="Gastox">
         <ExportManifestProperty>
-            <EntityMetaData name="Gastox" createdDate="2019-05-23T07:29:53.465-03:00" isFolder="true" path="Gastox" isHidden="false" isSchedulable="false" locale="pt_BR" title="Gastox"/>
+            <EntityMetaData name="Gastox" createdDate="2019-05-27T16:04:27.053-03:00" isFolder="true" path="Gastox" isHidden="false" isSchedulable="false" locale="pt_BR" title="Gastox"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -15,7 +15,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/Gastox.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Gastox.cda" createdDate="2019-05-23T07:29:53.762-03:00" isFolder="false" path="Gastox/Gastox.cda" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox"/>
+            <EntityMetaData name="Gastox.cda" createdDate="2019-05-27T16:04:27.089-03:00" isFolder="false" path="Gastox/Gastox.cda" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -27,7 +27,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/Gastox.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Gastox.cdfde" createdDate="2019-05-23T07:29:53.810-03:00" isFolder="false" path="Gastox/Gastox.cdfde" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox.cdfde"/>
+            <EntityMetaData name="Gastox.cdfde" createdDate="2019-05-27T16:04:27.162-03:00" isFolder="false" path="Gastox/Gastox.cdfde" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox.cdfde"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -39,31 +39,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/Gastox.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Gastox.wcdf" createdDate="2019-05-23T07:29:53.485-03:00" isFolder="false" path="Gastox/Gastox.wcdf" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox.wcdf"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="Gastox/js">
-        <ExportManifestProperty>
-            <EntityMetaData name="js" createdDate="2019-05-27T15:15:56.273-03:00" isFolder="true" path="Gastox/js" isHidden="false" isSchedulable="false" locale="pt_BR" title="js"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="Gastox/js/moment.js">
-        <ExportManifestProperty>
-            <EntityMetaData name="moment.js" createdDate="2019-05-27T15:16:05.984-03:00" isFolder="false" path="Gastox/js/moment.js" isHidden="true" isSchedulable="true" locale="pt_BR" title="moment.js"/>
+            <EntityMetaData name="Gastox.wcdf" createdDate="2019-05-27T16:04:27.198-03:00" isFolder="false" path="Gastox/Gastox.wcdf" isHidden="false" isSchedulable="true" locale="pt_BR" title="Gastox.wcdf"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -75,7 +51,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/ktr">
         <ExportManifestProperty>
-            <EntityMetaData name="ktr" createdDate="2019-05-23T07:29:53.849-03:00" isFolder="true" path="Gastox/ktr" isHidden="false" isSchedulable="false" locale="pt_BR" title="ktr"/>
+            <EntityMetaData name="ktr" createdDate="2019-05-27T16:04:27.225-03:00" isFolder="true" path="Gastox/ktr" isHidden="false" isSchedulable="false" locale="pt_BR" title="ktr"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -87,7 +63,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/ktr/barRs.ktr">
         <ExportManifestProperty>
-            <EntityMetaData name="barRs.ktr" createdDate="2019-05-23T07:29:54.124-03:00" isFolder="false" path="Gastox/ktr/barRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="barRs"/>
+            <EntityMetaData name="barRs.ktr" createdDate="2019-05-27T16:04:27.282-03:00" isFolder="false" path="Gastox/ktr/barRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="barRs"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -99,7 +75,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/ktr/categoriasRs.ktr">
         <ExportManifestProperty>
-            <EntityMetaData name="categoriasRs.ktr" createdDate="2019-05-23T07:29:54.413-03:00" isFolder="false" path="Gastox/ktr/categoriasRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="categoriasRs"/>
+            <EntityMetaData name="categoriasRs.ktr" createdDate="2019-05-27T16:04:27.491-03:00" isFolder="false" path="Gastox/ktr/categoriasRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="categoriasRs"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -111,7 +87,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/ktr/descripcionRs.ktr">
         <ExportManifestProperty>
-            <EntityMetaData name="descripcionRs.ktr" createdDate="2019-05-27T09:07:42.150-03:00" isFolder="false" path="Gastox/ktr/descripcionRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="descripcionRs"/>
+            <EntityMetaData name="descripcionRs.ktr" createdDate="2019-05-27T16:04:27.689-03:00" isFolder="false" path="Gastox/ktr/descripcionRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="descripcionRs"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -123,19 +99,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/ktr/metodosRs.ktr">
         <ExportManifestProperty>
-            <EntityMetaData name="metodosRs.ktr" createdDate="2019-05-27T09:27:56.740-03:00" isFolder="false" path="Gastox/ktr/metodosRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="metodosRs"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="Gastox/ktr/restToRs.ktr">
-        <ExportManifestProperty>
-            <EntityMetaData name="restToRs.ktr" createdDate="2019-05-23T07:29:54.810-03:00" isFolder="false" path="Gastox/ktr/restToRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="restToRs"/>
+            <EntityMetaData name="metodosRs.ktr" createdDate="2019-05-27T16:04:27.905-03:00" isFolder="false" path="Gastox/ktr/metodosRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="metodosRs"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -147,7 +111,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/ktr/totalRs.ktr">
         <ExportManifestProperty>
-            <EntityMetaData name="totalRs.ktr" createdDate="2019-05-23T07:29:55.031-03:00" isFolder="false" path="Gastox/ktr/totalRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="totalRs"/>
+            <EntityMetaData name="totalRs.ktr" createdDate="2019-05-27T16:04:28.125-03:00" isFolder="false" path="Gastox/ktr/totalRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="totalRs"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -159,7 +123,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="Gastox/restToRs.ktr">
         <ExportManifestProperty>
-            <EntityMetaData name="restToRs.ktr" createdDate="2019-05-23T07:29:55.241-03:00" isFolder="false" path="Gastox/restToRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="restToRs"/>
+            <EntityMetaData name="restToRs.ktr" createdDate="2019-05-27T16:04:28.344-03:00" isFolder="false" path="Gastox/restToRs.ktr" isHidden="true" isSchedulable="true" locale="pt_BR" title="restToRs"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
